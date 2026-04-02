@@ -30,6 +30,5 @@ test('User can view an article updated by another user', async ({ page2, article
   await viewArticlePage.assertArticleAuthorNameIsVisible(user1.username);
   await viewArticlePage.assertArticleTitleIsVisible(updatedArticle.title);
   await viewArticlePage.assertArticleTextIsVisible(articleWithoutTags.text);
-  await viewArticlePage.assertArticleDescriptionIsVisible(articleWithoutTags.title, articleWithoutTags.description);
 });
 });

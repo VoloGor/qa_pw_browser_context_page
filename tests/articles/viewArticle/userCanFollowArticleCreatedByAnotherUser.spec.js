@@ -11,8 +11,8 @@ test.beforeEach(async ({ page1, page2, user1, user2, articleWithoutTags }) => {
   await createArticle(page1, articleWithoutTags);
 });
 
-test('User can follow an article created by another user', async ({ page2, articleWithoutTags, user1, user2 }) => {
-  const homePage = new HomePage(page2, articleWithoutTags.title);
+test('User can favorite an article created by another user', async ({ page2, articleWithoutTags, user1, user2 }) => {
+  const homePage = new HomePage(page2);
   const profilePage = new ProfilePage(page2);
 
   await homePage.clickGlobalFeedTab();

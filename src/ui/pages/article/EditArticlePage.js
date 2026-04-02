@@ -12,7 +12,7 @@ export class EditArticlePage {
       name: 'Update Article',
     });
   }
-async fillTitleField(title) {
+  async fillTitleField(title) {
     await test.step(`Fill the 'Title' field`, async () => {
       await this.titleField.fill(title);
     });

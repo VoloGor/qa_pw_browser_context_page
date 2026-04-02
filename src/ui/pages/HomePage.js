@@ -101,7 +101,7 @@ export class HomePage {
     });
   }
   async assertArticleAuthorNameIsHidden(title) {
-    await test.step(`Assert the article has correct author`, async () => {
+    await test.step(`Assert the article author is hidden`, async () => {
       await expect(
         this.getArticleBlock(title).locator('.author')
       ).toBeHidden();

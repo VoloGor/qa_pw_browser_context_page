@@ -11,7 +11,7 @@ test.beforeEach(async ({ page1, page2, user1, user2, articleWithoutTags }) => {
 });
 
 test('User can view an article created by another user in global feed', async ({ page2, articleWithoutTags, user1 }) => {
-  const homePage = new HomePage(page2, articleWithoutTags.title);
+  const homePage = new HomePage(page2);
 
   await homePage.clickGlobalFeedTab();
 
