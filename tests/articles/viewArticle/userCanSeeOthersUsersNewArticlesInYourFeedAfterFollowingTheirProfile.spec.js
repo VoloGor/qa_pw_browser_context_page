@@ -5,7 +5,7 @@ import { createArticle } from '../../../src/ui/actions/articles/createArticle';
 import { signUpUser } from '../../../src/ui/actions/auth/signUpUser';
 
 test.beforeEach(async ({ page1, page2, user1, user2, articleWithoutTags }) => {
-  const homePage = new HomePage(page2, articleWithoutTags.title);
+  const homePage = new HomePage(page2);
   const profilePage = new ProfilePage(page2);
   await signUpUser(page1, user1);
   await signUpUser(page2, user2);
@@ -18,7 +18,7 @@ test.beforeEach(async ({ page1, page2, user1, user2, articleWithoutTags }) => {
 
 test('User can see other user\'s new articles in "Your Feed" after following their profile', 
   async ({ page2, articleWithoutTags, user1 }) => {
-  const homePage = new HomePage(page2, articleWithoutTags.title);
+  const homePage = new HomePage(page2);
   
   await homePage.open();
   await homePage.clickYourFeedTab();
