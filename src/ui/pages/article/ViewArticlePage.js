@@ -8,7 +8,7 @@ export class ViewArticlePage {
   }
 
   authorLinkInArticleHeader(username) {
-    return this.page.getByRole('link', { username }).first(); // yes, it is using username as a text, because the username is a link text
+    return this.page.getByRole('link', { name: username }).first();
   }
 
   url() {
